@@ -15,9 +15,24 @@ chsh -s $(which zsh)
 - Change the font to 14pt Source Code Pro Lite. Source Code Pro can be downloaded using `brew tap homebrew/cask-fonts && brew cask install font-source-code-pro`
 
 ```
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+open ~/.zshrc
+ZSH_THEME="agnoster"
 
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
+git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+
+open ~/.zshrc
+
+  plugins=(
+  git
+  zsh-syntax-highlighting
+  zsh-autosuggestions
+  )
 
 
 
 ```
+
+
