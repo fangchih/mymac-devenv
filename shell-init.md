@@ -15,7 +15,7 @@ chsh -s $(which zsh)
 mkdir ~/dev
 ```
 
-### for iterm2 profile
+### Adjust iterm2 profile
 - profiles -> Default -> General -> Working Driectory to choose Directory `~/dev`
 - profiles -> Default -> Window -> Columns to 120, Rows to 38
 - profiles -> Default -> Terminal -> Check silence bell to disable the terminal session from making any sound
