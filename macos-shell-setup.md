@@ -51,5 +51,8 @@ nvm install 12
 
 ```
 brew cask install docker
-docker rmi $(docker images -f "dangling=true" -q)
+
+open ~/.zshrc
+  docker rmi $(docker images -f "dangling=true" -q)
+  
 ```
