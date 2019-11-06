@@ -1,9 +1,7 @@
-### Install Homebrew and other dev apps
+### Install Homebrew and zsh apps
 
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-brew cask install docker
 
 brew cask install iterm2
 
@@ -49,4 +47,9 @@ nvm install 12
 
 ```
 
+### docker
 
+```
+brew cask install docker
+docker rmi $(docker images -f "dangling=true" -q)
+```
