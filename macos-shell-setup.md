@@ -11,6 +11,7 @@ mkdir ~/dev
 brew cask install iterm2
 brew tap homebrew/cask-fonts && brew cask install font-source-code-pro
 ```
+- Preferences -> Appearance -> General, status bar lower.
 - profiles -> Default -> General -> Working Driectory to choose Directory `~/dev`
 - profiles -> Default -> Window -> Columns to 120, Rows to 38
 - profiles -> Default -> Terminal -> Check silence bell to disable the terminal session from making any sound
@@ -41,6 +42,10 @@ open ~/.zshrc
   zsh-syntax-highlighting
   zsh-autosuggestions
   )
+  
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+
 ```
 
 ### nvm & node
