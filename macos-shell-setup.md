@@ -6,6 +6,12 @@
 mkdir ~/dev
 ```
 
+### git
+```
+git config core.ignorecase false
+
+```
+
 ### iterm2
 ```
 brew cask install iterm2
