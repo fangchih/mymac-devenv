@@ -73,3 +73,12 @@ open ~/.zshrc
   docker rmi $(docker images -f "dangling=true" -q)
   
 ```
+
+### vscode
+
+```
+brew cask install visual-studio-code
+
+# install setting sync, then sync setting from gits
+https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
+```
