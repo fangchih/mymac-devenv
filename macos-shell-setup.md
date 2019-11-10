@@ -82,3 +82,11 @@ brew cask install visual-studio-code
 # install setting sync, then sync setting from gits
 https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
 ```
+
+### java
+```
+brew cask install adoptopenjdk
+
+open ~/.zshrc
+  export JAVA_HOME=$(/usr/libexec/java_home)
+```
