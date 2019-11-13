@@ -39,9 +39,15 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 
+git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+
 open ~/.zshrc
   
-  ZSH_THEME="agnoster"
+  ZSH_THEME="powerlevel9k/powerlevel9k"
+
+  POWERLEVEL9K_MODE='nerdfont-complete'
+  POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir dir_writable vcs)
+  POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
 
   plugins=(
   git
