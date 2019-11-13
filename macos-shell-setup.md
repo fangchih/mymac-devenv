@@ -18,7 +18,7 @@ brew cask install iterm2
 brew tap homebrew/cask-fonts
 brew cask install font-source-code-pro
 brew cask install font-hack-nerd-font
-
+brew cask install font-meslo-nerd-font
 ```
 - Preferences -> Appearance -> General, status bar lower.
 - profiles -> Default -> General -> Working Driectory to choose Directory `~/dev`
@@ -37,6 +37,8 @@ sudo sh -c "echo $(which zsh) >> /etc/shells"
 chsh -s $(which zsh)
 
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# reload shell
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
