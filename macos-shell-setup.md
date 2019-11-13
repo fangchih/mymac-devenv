@@ -78,14 +78,31 @@ open ~/.p10k.zsh
 
 ```
 
-### docker
+### python3
+```
+brew update && brew install python
 
+open ~/.zshrc
+  alias python=/usr/local/bin/python3
+  
+```
+
+
+### docker
 ```
 brew cask install docker
 
 open ~/.zshrc
   docker rmi $(docker images -f "dangling=true" -q)
   
+```
+
+### java
+```
+brew cask install adoptopenjdk
+
+open ~/.zshrc
+  export JAVA_HOME=$(/usr/libexec/java_home)
 ```
 
 ### vscode
@@ -95,12 +112,4 @@ brew cask install visual-studio-code
 
 # install setting sync, then sync setting from gits
 https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
-```
-
-### java
-```
-brew cask install adoptopenjdk
-
-open ~/.zshrc
-  export JAVA_HOME=$(/usr/libexec/java_home)
 ```
