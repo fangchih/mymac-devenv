@@ -15,7 +15,10 @@ git config core.ignorecase false
 ### iterm2
 ```
 brew cask install iterm2
-brew tap homebrew/cask-fonts && brew cask install font-source-code-pro
+brew tap homebrew/cask-fonts
+brew cask install font-source-code-pro
+brew cask install font-hack-nerd-font
+
 ```
 - Preferences -> Appearance -> General, status bar lower.
 - profiles -> Default -> General -> Working Driectory to choose Directory `~/dev`
@@ -39,15 +42,11 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 
-git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 
 open ~/.zshrc
   
-  ZSH_THEME="powerlevel9k/powerlevel9k"
-
-  POWERLEVEL9K_MODE='nerdfont-complete'
-  POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir dir_writable vcs)
-  POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
+  ZSH_THEME="powerlevel10k/powerlevel10k"
 
   plugins=(
   git
