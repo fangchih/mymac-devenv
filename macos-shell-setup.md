@@ -69,6 +69,13 @@ open ~/.zshrc
   export NVM_DIR="$HOME/.nvm"
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
+open ~/.p10k.zsh
+  function prompt_example() {
+    local node_ver="$(nvm current)"
+    # -i '⭐'
+    p10k segment -f 208 -t "node: ${node_ver[(ws:.:)1]}"
+  }
+
 ```
 
 ### docker
