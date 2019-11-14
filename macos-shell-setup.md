@@ -58,7 +58,9 @@ open ~/.zshrc
   zsh-autosuggestions
   )
   
-
+  # add this line to the end of file
+  # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+  [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 ```
 
 ### nvm & node
@@ -84,8 +86,8 @@ open ~/.p10k.zsh
 ```
 brew update && brew install python
 
-open ~/.zshrc
-  alias python=/usr/local/bin/python3
+# open ~/.zshrc
+#  alias python=/usr/local/bin/python3
   
 ```
 
