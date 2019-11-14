@@ -841,11 +841,14 @@
     local py
     if which python3 >/dev/null; then
       py=$(command -v python3)
+      local d=$(dirname $(command -v python3))
+      ln -s $d/python3 $d/python > /dev/null 2>&1
+      ln -s $d/pip3 $d/pip > /dev/null 2>&1
     else
       py=$(command -v python)
     fi
     local python_info="$($py -V 2>&1)"
-    p10k segment -f 208 -i '⭐' -t "node ${node_ver} | ${python_info} "
+    p10k segment -f 208 -t "node ${node_ver} | ${python_info} "
   }
 
   # User-defined prompt segments may optionally provide an instant_prompt_* function. Its job
