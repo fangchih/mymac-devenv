@@ -839,10 +839,10 @@
   function prompt_example() {
     local node_ver="$(nvm current)"
     local py
-    if which python >/dev/null; then
-      py=$(command -v python)
-    else
+    if which python3 >/dev/null; then
       py=$(command -v python3)
+    else
+      py=$(command -v python)
     fi
     local python_info="$($py -V 2>&1)"
     p10k segment -f 208 -i '⭐' -t "node ${node_ver} | ${python_info} "
