@@ -6,6 +6,18 @@
 mkdir ~/dev
 ```
 
+### Vagrant
+```
+brew cask install virtualbox
+brew cask install vagrant
+brew cask install vagrant-manager
+```
+
+### go
+```
+brew install golang
+```
+
 ### git
 ```
 git config core.ignorecase false
@@ -63,7 +75,7 @@ open ~/.zshrc
   [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 ```
 
-### nvm & node
+### node.js
 
 ```
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
