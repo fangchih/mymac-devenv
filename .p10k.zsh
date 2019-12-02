@@ -847,10 +847,11 @@
     else
       py=$(command -v python)
     fi
-    local python_info="$($py -V 2>&1)"
+    local p="$($py -V 2>&1)"
+    local py_ver=${p/\ /\ v}
     local g=`go version | cut -d ' ' -f 3`
     local go_ver="${g/go/v}"
-    p10k segment -f 208 -t "Node.js ${node_ver} | ${python_ver} | Go ${go_ver}"    
+    p10k segment -f 208 -t "Node.js ${node_ver} | ${py_ver} | Go ${go_ver}"    
   }
 
   # User-defined prompt segments may optionally provide an instant_prompt_* function. Its job
