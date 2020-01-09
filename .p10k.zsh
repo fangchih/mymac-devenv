@@ -850,8 +850,8 @@
     local p="$($py -V 2>&1)"
     local py_ver=${p/\ /\ v}
     local g=`go version | cut -d ' ' -f 3`
-    local go_ver="${g/go/v}"
-    p10k segment -f 208 -t "Node.js ${node_ver} | ${py_ver} | Go ${go_ver}"    
+    local java_ver=`java -fullversion 2>&1 | cut -d'"' -f2`
+    p10k segment -f 208 -t "Node.js ${node_ver} | ${py_ver} | Go ${go_ver} | Java v${java_ver}"
   }
 
   # User-defined prompt segments may optionally provide an instant_prompt_* function. Its job
