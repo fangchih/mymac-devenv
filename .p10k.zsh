@@ -53,16 +53,16 @@
       direnv                  # direnv status (https://direnv.net/)
       virtualenv              # python virtual environment (https://docs.python.org/3/library/venv.html)
       # anaconda                # conda environment (https://conda.io/)
-      pyenv                   # python environment (https://github.com/pyenv/pyenv)
+      # pyenv                   # python environment (https://github.com/pyenv/pyenv)
       # nodenv                  # node.js version from nodenv (https://github.com/nodenv/nodenv)
       # nvm                     # node.js version from nvm (https://github.com/nvm-sh/nvm)
       # nodeenv                 # node.js environment (https://github.com/ekalinin/nodeenv)
-      #node_version          # node.js version
+      # node_version          # node.js version
       # go_version            # go version (https://golang.org)
       # rust_version          # rustc version (https://www.rust-lang.org)
       # dotnet_version        # .NET version (https://dotnet.microsoft.com)
-      rbenv                   # ruby version from rbenv (https://github.com/rbenv/rbenv)
-      rvm                     # ruby version from rvm (https://rvm.io)
+      # rbenv                   # ruby version from rbenv (https://github.com/rbenv/rbenv)
+      # rvm                     # ruby version from rvm (https://rvm.io)
       kubecontext             # current kubernetes context (https://kubernetes.io/)
       terraform               # terraform workspace (https://www.terraform.io)
       aws                     # aws profile (https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html)
@@ -852,7 +852,10 @@
     local g=`go version | cut -d ' ' -f 3`
     local go_ver=${g/go/v}
     local java_ver=`java -fullversion 2>&1 | cut -d'"' -f2`
-    p10k segment -f 208 -t "Node.js ${node_ver} | ${py_ver} | Go ${go_ver} | Java v${java_ver}"
+    
+    local rb_ver=`ruby -v | cut -d ' ' -f 2`
+    
+    p10k segment -f 208 -t "Node.js ${node_ver} | ${py_ver} | Go ${go_ver} | Java v${java_ver} | Ruby v${rb_ver}"
   }
 
   # User-defined prompt segments may optionally provide an instant_prompt_* function. Its job
