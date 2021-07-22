@@ -22,10 +22,10 @@ git config --global core.ignorecase false
 ```
 brew cask install iterm2
 brew tap homebrew/cask-fonts
-brew cask install font-source-code-pro
-brew cask install font-hack-nerd-font
-brew cask install font-meslo-nerd-font
+brew install --cask font-source-code-pro
+brew install --cask font-hack-nerd-font
 ```
+
 - Preferences -> Appearance -> General, status bar lower.
 - profiles -> Default -> General -> Working Driectory to choose Directory `~/dev`
 - profiles -> Default -> Window -> Columns to 120, Rows to 38
@@ -37,10 +37,11 @@ brew cask install font-meslo-nerd-font
 ### zsh
 
 ```
-brew install zsh zsh-completions
+# brew install zsh
+brew install zsh-completions
 
-sudo sh -c "echo $(which zsh) >> /etc/shells"
-chsh -s $(which zsh)
+# sudo sh -c "echo $(which zsh) >> /etc/shells"
+# chsh -s $(which zsh)
 
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
@@ -72,7 +73,7 @@ open ~/.zshrc
 ### node.js
 
 ```
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 nvm install 12
 
 open ~/.zshrc
@@ -100,7 +101,7 @@ brew update && brew install python
 
 ### docker
 ```
-brew cask install docker
+brew install --cask docker
 
 open ~/.zshrc
   docker rmi $(docker images -f "dangling=true" -q)
@@ -109,7 +110,7 @@ open ~/.zshrc
 
 ### java
 ```
-brew cask install adoptopenjdk
+brew install --cask adoptopenjdk
 
 open ~/.zshrc
   export JAVA_HOME=$(/usr/libexec/java_home)
