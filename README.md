@@ -6,21 +6,15 @@
 mkdir ~/dev
 ```
 
-### Vagrant
-```
-brew cask install virtualbox
-brew cask install vagrant
-brew cask install vagrant-manager
-```
-
 ### go
 ```
 brew install golang
 ```
 
 ### git
+
 ```
-git config core.ignorecase false
+git config --global core.ignorecase false
 
 ```
 
