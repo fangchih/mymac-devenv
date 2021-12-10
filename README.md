@@ -110,11 +110,15 @@ open ~/.zshrc
 
 ### java
 ```
-brew install --cask adoptopenjdk
+brew install AdoptOpenJDK/openjdk/adoptopenjdk{11,14}
 
-open ~/.zshrc
-  export JAVA_HOME=$(/usr/libexec/java_home)
+function jdk
+	set java_version $argv
+	set -Ux JAVA_HOME (/usr/libexec/java_home -v $java_version)
+	java -version
+end
 ```
+ref to [link](https://github.com/AdoptOpenJDK/homebrew-openjdk)
 
 ### vscode
 
